@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ExtensionManifest ExtensionBundleId="io.creativetools.designer" ExtensionBundleVersion="1.0.0" Version="7.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtensionList>
+    <Extension Id="io.creativetools.designer.panel" Version="1.0.0" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="PHSP" Version="14.0" />
+      <Host Name="PHXS" Version="14.0" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="6.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="io.creativetools.designer.panel">
+      <DispatchInfo>
+        <Resources>
+          <!-- <MainPath>./index.html</MainPath> -->
+          <MainPath>./index-dev.html</MainPath>
+          <ScriptPath>./jsx/photoshop.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <!-- Doesn't show in Window > Extensions unless mixed content is also enabled -->
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Creative Tools Designer Panel</Menu>
+          <Geometry>
+            <Size>
+              <Height>400</Height>
+              <Width>300</Width>
+            </Size>
+            <MaxSize>
+              <Height>500</Height>
+              <Width>500</Width>
+            </MaxSize>
+            <MinSize>
+              <Height>300</Height>
+              <Width>300</Width>
+            </MinSize>
+          </Geometry>
+          <Icons />
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
